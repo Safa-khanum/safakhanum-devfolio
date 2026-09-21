@@ -4,4 +4,4 @@
 - [x] Remove all academic scores and reduce education to the two requested entries
 - [x] Add recruiter-scannable project, skills, experience, open-source, achievement, and contact sections
 - [x] Add responsive custom visuals for every project
-- [ ] Validate desktop and mobile layouts and interactions
+- [x] Validate desktop and mobile layouts and interactions
