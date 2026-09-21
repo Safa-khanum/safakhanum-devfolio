@@ -187,7 +187,7 @@ function CompactProject({ project, index }: { project: Project; index: number })
   return <article className="compact-project" data-reveal><ProjectVisual type={project.visual} flow={project.flow} compact /><div className="compact-copy"><span>0{index}</span><h3>{project.name}</h3><h4>{project.subtitle}</h4><p>{project.description}</p><UnavailableGithub /></div></article>;
 }
 
-function ProjectVisual({ type, flow, compact = false }: { type: Project["visual"]; flow?: string[]; compact?: boolean }) {
+function ProjectVisual({ type, flow, compact = false }: { type: Project["visual"]; flow?: string[] | undefined; compact?: boolean }) {
   const icons: Record<Project["visual"], typeof HeartPulse> = { health: HeartPulse, chat: MessageSquare, pizza: Pizza, career: BrainCircuit, security: ShieldCheck, game: Code2, sos: Zap, music: Music2, care: HeartPulse };
   const Icon = icons[type];
   if (flow) return <div className={`project-mockup flow-mockup ${compact ? "compact" : ""}`}><div className="mockup-bar"><span /><span /><span /><b>{type}.system</b></div><div className="flow-steps">{flow.map((step, index) => <div className="contents" key={step}><div><Icon /><span>{step}</span></div>{index < flow.length - 1 && <ArrowDown />}</div>)}</div></div>;
