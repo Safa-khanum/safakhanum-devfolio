@@ -1,7 +1,6 @@
-# Portfolio roadmap
+# Roadmap
 
-- [x] Redesign the full portfolio in the selected architectural technical-dark direction
-- [x] Remove all academic scores and reduce education to the two requested entries
-- [x] Add recruiter-scannable project, skills, experience, open-source, achievement, and contact sections
-- [x] Add responsive custom visuals for every project
-- [x] Validate desktop and mobile layouts and interactions
+- [x] Original portfolio build
+- [x] Technical-dark redesign
+- [x] All-dark theme (remove white sections)
+- [x] Personal developer-portfolio redesign per uploaded brief (floating tech cloud, natural copy, realistic project mockups, no system-architecture visuals, hidden unavailable links, verified desktop + mobile)
