@@ -27,6 +27,13 @@ const navItems = [
   ["Experience", "experience"], ["Open Source", "open-source"], ["Contact", "contact"],
 ];
 
+const socialLinks: Record<string, string> = {
+  GitHub: "https://github.com/Safa-khanum",
+  LinkedIn: "https://www.linkedin.com/in/safakhanum-soudagar-306933357/",
+  LeetCode: "https://leetcode.com/u/SafakhanumSoudagar/",
+};
+const email = "safauiux@gmail.com";
+
 const floatingTech = [
   "React", "TypeScript", "Node.js", "Python", "Java", "PostgreSQL",
   "Spring Boot", "Docker", "MongoDB", "Flask", "WebSockets", "Tailwind CSS",
@@ -146,10 +153,10 @@ function Portfolio() {
           <div className="content-shell about-layout">
             <div>
               <p className="section-eyebrow">About</p>
-              <h2>I like building things that work.</h2>
+              <h2>A developer who likes building things.</h2>
             </div>
             <div className="about-copy">
-              <p>I'm a Computer Science engineer who enjoys building products across the stack — from React interfaces and APIs to real-time systems and AI-powered applications.</p>
+              <p>I work across frontend, backend, APIs, real-time applications, databases, AI/ML, cloud and DevOps — using open source to keep learning through real code and collaboration.</p>
               <p>Lately I've been contributing to OpenMRS, which means reading other people's code, debugging it, and making it a little better than I found it.</p>
             </div>
           </div>
@@ -221,6 +228,7 @@ function Portfolio() {
               <h2>Learning in public.</h2>
               <p className="section-sub">Programs I've been part of:</p>
               <div className="program-list">{["SWOC", "Open Source Connect", "Code Social", "Elite Coders"].map((item) => <span key={item}>{item}</span>)}</div>
+              <a className="leetcode-link" href={socialLinks["LeetCode"]} target="_blank" rel="noreferrer"><Code2 />300+ LeetCode Problems<ArrowUpRight /></a>
             </div>
           </div>
         </section>
@@ -247,11 +255,11 @@ function Portfolio() {
 
         <section id="contact" className="contact-section" data-reveal>
           <div className="content-shell contact-inner">
-            <h2>Let's work together.</h2>
-            <p>Have a project, an opportunity, or just want to talk tech? I'd love to hear from you.</p>
-            <Button asChild size="lg"><a href="mailto:safakhanumsoudagar@gmail.com">Send an email <ArrowUpRight /></a></Button>
+            <h2>Let's build something.</h2>
+            <p>Open to software engineering, backend and full-stack opportunities.</p>
+            <Button asChild size="lg"><a href={`mailto:${email}`}>Send an email <ArrowUpRight /></a></Button>
             <div className="contact-links">
-              <a href="mailto:safakhanumsoudagar@gmail.com"><Mail />Email</a>
+              <a href={`mailto:${email}`}><Mail />{email}</a>
               <SocialIcon label="GitHub"><Github /></SocialIcon>
               <SocialIcon label="LinkedIn"><Linkedin /></SocialIcon>
               <SocialIcon label="LeetCode"><Code2 /></SocialIcon>
@@ -261,7 +269,7 @@ function Portfolio() {
       </main>
       <footer>
         <div className="content-shell">
-          <div><strong>Safakhanum Soudagar</strong><span>· Developer</span></div>
+          <div><strong>Safakhanum Soudagar</strong></div>
           <div><SocialIcon label="GitHub"><Github /></SocialIcon><SocialIcon label="LinkedIn"><Linkedin /></SocialIcon><SocialIcon label="LeetCode"><Code2 /></SocialIcon></div>
         </div>
       </footer>
@@ -332,6 +340,7 @@ function FeaturedProject({ project, reverse }: { project: Project; reverse: bool
         <p>{project.description}</p>
         <ul>{project.highlights.map((item) => <li key={item}>{item}</li>)}</ul>
         <div className="tech-list">{project.stack.map((item) => <span key={item}>{item}</span>)}</div>
+        <div className="project-links"><Button asChild variant="outline" size="sm"><a href={socialLinks["GitHub"]} target="_blank" rel="noreferrer"><Github />GitHub</a></Button></div>
       </div>
     </article>
   );
@@ -345,6 +354,7 @@ function CompactProject({ project }: { project: Project }) {
         <h3>{project.name}</h3>
         <h4>{project.subtitle}</h4>
         <p>{project.description}</p>
+        <a className="compact-gh" href={socialLinks["GitHub"]} target="_blank" rel="noreferrer"><Github />GitHub</a>
       </div>
     </article>
   );
@@ -446,5 +456,5 @@ function Education({ degree, school, year }: { degree: string; school: string; y
   return <article className="education-item"><GraduationCap /><div><strong>{degree}</strong><p>{school}</p></div><span>{year}</span></article>;
 }
 function SocialIcon({ label, children }: { label: string; children: ReactNode }) {
-  return <span className="social-link" aria-label={label} title={label}>{children}</span>;
+  return <a className="social-link" href={socialLinks[label]} target="_blank" rel="noreferrer" aria-label={label} title={label}>{children}</a>;
 }
