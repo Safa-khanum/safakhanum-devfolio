@@ -11,9 +11,9 @@ import { Button } from "@/components/ui/button";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Safakhanum Soudagar — Software Engineer" },
+      { title: "Safakhanum Soudagar — Software Engineering Portfolio" },
       { name: "description", content: "Safakhanum Soudagar builds full-stack applications, backend systems, real-time experiences and AI-powered products." },
-      { property: "og:title", content: "Safakhanum Soudagar — Software Engineer" },
+      { property: "og:title", content: "Safakhanum Soudagar — Software Engineering Portfolio" },
       { property: "og:description", content: "Full-stack applications, backend systems, real-time experiences and AI-powered products." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -127,7 +127,7 @@ function Portfolio() {
             <div className="hero-copy" data-reveal>
               <p className="hero-hello">Hi, I'm</p>
               <h1>Safakhanum<br />Soudagar</h1>
-              <p className="hero-role">Software Engineer</p>
+              <p className="hero-role">Software Engineering</p>
               <p className="hero-summary">I build full-stack applications, backend systems and AI-powered products.</p>
               <div className="hero-actions">
                 <Button asChild size="lg"><a href="#work">View my work <ArrowDown /></a></Button>
@@ -261,7 +261,7 @@ function Portfolio() {
       </main>
       <footer>
         <div className="content-shell">
-          <div><strong>Safakhanum Soudagar</strong><span>Software Engineer</span></div>
+          <div><strong>Safakhanum Soudagar</strong><span>· Developer</span></div>
           <div><SocialIcon label="GitHub"><Github /></SocialIcon><SocialIcon label="LinkedIn"><Linkedin /></SocialIcon><SocialIcon label="LeetCode"><Code2 /></SocialIcon></div>
         </div>
       </footer>
