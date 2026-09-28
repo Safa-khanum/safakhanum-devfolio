@@ -228,7 +228,7 @@ function Portfolio() {
               <h2>Learning in public.</h2>
               <p className="section-sub">Programs I've been part of:</p>
               <div className="program-list">{["SWOC", "Open Source Connect", "Code Social", "Elite Coders"].map((item) => <span key={item}>{item}</span>)}</div>
-              <a className="leetcode-link" href={socialLinks.LeetCode} target="_blank" rel="noreferrer"><Code2 />300+ LeetCode Problems<ArrowUpRight /></a>
+              <a className="leetcode-link" href={socialLinks["LeetCode"]} target="_blank" rel="noreferrer"><Code2 />300+ LeetCode Problems<ArrowUpRight /></a>
             </div>
           </div>
         </section>
@@ -340,7 +340,7 @@ function FeaturedProject({ project, reverse }: { project: Project; reverse: bool
         <p>{project.description}</p>
         <ul>{project.highlights.map((item) => <li key={item}>{item}</li>)}</ul>
         <div className="tech-list">{project.stack.map((item) => <span key={item}>{item}</span>)}</div>
-        <div className="project-links"><Button asChild variant="outline" size="sm"><a href={socialLinks.GitHub} target="_blank" rel="noreferrer"><Github />GitHub</a></Button></div>
+        <div className="project-links"><Button asChild variant="outline" size="sm"><a href={socialLinks["GitHub"]} target="_blank" rel="noreferrer"><Github />GitHub</a></Button></div>
       </div>
     </article>
   );
@@ -354,7 +354,7 @@ function CompactProject({ project }: { project: Project }) {
         <h3>{project.name}</h3>
         <h4>{project.subtitle}</h4>
         <p>{project.description}</p>
-        <a className="compact-gh" href={socialLinks.GitHub} target="_blank" rel="noreferrer"><Github />GitHub</a>
+        <a className="compact-gh" href={socialLinks["GitHub"]} target="_blank" rel="noreferrer"><Github />GitHub</a>
       </div>
     </article>
   );
