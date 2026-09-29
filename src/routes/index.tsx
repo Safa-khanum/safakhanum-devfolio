@@ -341,7 +341,7 @@ function FeaturedProject({ project, reverse }: { project: Project; reverse: bool
         <p>{project.description}</p>
         <ul>{project.highlights.map((item) => <li key={item}>{item}</li>)}</ul>
         <div className="tech-list">{project.stack.map((item) => <span key={item}>{item}</span>)}</div>
-        <div className="project-links"><Button asChild variant="outline" size="sm"><a href={socialLinks["GitHub"]} target="_blank" rel="noreferrer"><Github />GitHub</a></Button></div>
+        <div className="project-links"><Button asChild variant="outline" size="sm"><a href={project.repo ?? socialLinks["GitHub"]} target="_blank" rel="noopener noreferrer"><Github />GitHub</a></Button></div>
       </div>
     </article>
   );
@@ -355,7 +355,7 @@ function CompactProject({ project }: { project: Project }) {
         <h3>{project.name}</h3>
         <h4>{project.subtitle}</h4>
         <p>{project.description}</p>
-        <a className="compact-gh" href={socialLinks["GitHub"]} target="_blank" rel="noreferrer"><Github />GitHub</a>
+        <a className="compact-gh" href={project.repo ?? socialLinks["GitHub"]} target="_blank" rel="noopener noreferrer"><Github />GitHub</a>
       </div>
     </article>
   );
