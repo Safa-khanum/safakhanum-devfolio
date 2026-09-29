@@ -52,6 +52,7 @@ const skillGroups = [
 type Project = {
   name: string; subtitle: string; description: string; stack: string[];
   highlights: string[]; visual: "health" | "chat" | "pizza" | "career" | "security" | "game" | "sos" | "music" | "care";
+  repo?: string;
 };
 
 const featuredProjects: Project[] = [
@@ -80,10 +81,10 @@ const featuredProjects: Project[] = [
 
 const otherProjects: Project[] = [
   { name: "PathNova AI", subtitle: "Smart Career Advisor", description: "An AI career experience centered on skills, recommendations, roadmaps and interview preparation.", stack: [], highlights: [], visual: "career" },
-  { name: "LLM Safety Gateway", subtitle: "Prompt Security Firewall", description: "A prompt security workflow that analyzes input, assigns a threat score and routes it to allow, sanitize or block.", stack: [], highlights: [], visual: "security" },
-  { name: "CodeQuest", subtitle: "Letter Hunt", description: "A letter-hunt game built around an interactive code quest.", stack: [], highlights: [], visual: "game" },
+  { name: "LLM Safety Gateway", subtitle: "Prompt Security Firewall", description: "A prompt security workflow that analyzes input, assigns a threat score and routes it to allow, sanitize or block.", stack: [], highlights: [], visual: "security", repo: "https://github.com/Safa-khanum/LLM_Safety_Gateway" },
+  { name: "CodeQuest", subtitle: "Letter Hunt", description: "A letter-hunt game built around an interactive code quest.", stack: [], highlights: [], visual: "game", repo: "https://github.com/Safa-khanum/CodeQuest-Letter-Hunt" },
   { name: "RescueRipple", subtitle: "Emergency SOS Alert System", description: "An emergency SOS alert system focused on making urgent assistance easier to trigger.", stack: [], highlights: [], visual: "sos" },
-  { name: "VibeFinder", subtitle: "Music Discovery & Visualization Tool", description: "A music discovery interface for exploring artists, albums and listening insights.", stack: [], highlights: [], visual: "music" },
+  { name: "VibeFinder", subtitle: "Music Discovery & Visualization Tool", description: "A music discovery interface for exploring artists, albums and listening insights.", stack: [], highlights: [], visual: "music", repo: "https://github.com/Safa-khanum/VibeFinder-Music-Tool" },
   { name: "Synapse Care", subtitle: "AI-Powered Holistic Health Assistant", description: "An AI healthcare assistant for chat, report analysis and accessible health information.", stack: [], highlights: [], visual: "care" },
 ];
 
